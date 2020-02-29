@@ -1,0 +1,533 @@
+@import "colors";
+
+*, 
+*::before, 
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	font-family: "Montserrat";
+}
+
+body {
+	margin: 0;
+}
+
+.header {
+	margin-bottom: 11rem;
+	min-height: 100vh;
+	position: relative;
+	z-index: 9;
+	background-image: url("../img/header_banner.jpg");
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-position: center;
+	color: $white;
+	
+	&__bar {
+		padding: 3.5rem 0;
+		display: flex;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+		
+		&--left {
+			display: inline-flex;
+			-webkit-justify-content: space-between;
+			        justify-content: space-between;
+		}
+
+		&--right {
+			display: contents;
+		}
+	}
+
+	&__logo {
+		font-size: 2.4rem;
+		font-weight: bold;
+	}
+
+	&__nav {
+		&-list {
+			margin: .8rem 0;
+			max-width: 100%;
+			padding: 0;
+			display: flex;
+			-webkit-justify-content: space-between;
+			        justify-content: space-between;
+			font-size: 1.6rem;
+			list-style-type: none;
+		}
+
+		&-item {
+			margin-left: 3rem;
+		}
+
+		&-link {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+
+	&__btn {
+		margin-left: auto;
+		width: 12rem;
+		height: 4rem;
+		border: .1rem solid $white;
+		color: $white;
+		background-color: transparent;
+		-webkit-border-radius: .6rem;
+		        border-radius: .6rem;
+		font-size: 1.6rem;
+		cursor: pointer;
+	}
+
+	&__banner {
+		min-height: calc(100vh - 11rem);
+		display: flex;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		-webkit-align-items: center;
+		        align-items: center;
+	}
+
+	&__title {
+		margin: 0;
+		font-size: 7.2rem;
+		text-align: center;
+	}
+
+	&__descr {
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	&__form {
+		margin: auto;
+		width: calc(100% - 11.71%);
+		display: flex;
+		-webkit-justify-content: center;
+		        justify-content: center;position: absolute;
+		bottom: -2.75rem;
+		left: 50%;
+		transform: translateX(-50%);
+
+		&-cont {
+			width: 100%;
+			position: relative;
+		}
+		
+		&-input {
+			height: 5.5rem;
+			padding: 0 3rem;
+			font-size: 1.6rem;
+			border: .1rem solid $greyLight;
+			
+			&:nth-child(1),
+			&:nth-child(2) {
+				width: 34.36%;
+			}
+
+			&:nth-child(3) {
+				width: 18.46%;
+			}
+		}
+
+		&-submit {
+			width: 12.82%;
+			border-width: 0;
+			color: $white;
+			background-color: $red;
+			cursor: pointer;
+		}
+	}
+}
+
+.flights {
+	margin: 8rem 0;
+	
+	&__cont {
+		display: flex;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+		-webkit-align-items: flex-end;
+		        align-items: flex-end;
+	}
+	
+	&__heading {
+		margin: 0;
+		font-size: 3rem;
+		font-weight: normal;
+		display: inline-block;
+	}
+
+	&__nav {
+		margin-left: auto;
+		display: inline-block;
+		
+		&-list {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			list-style-type: none;
+		}
+
+		&-item {
+			&:not(:first-child) {
+				margin-left: 3rem;
+			}
+		}
+
+		&-btn {
+			padding: 0;
+			border-width: 0;
+			background-color: transparent;
+			font-size: 1.6rem;
+			cursor: pointer;
+			
+			&--current {
+				color: $red;
+			}
+		}
+	}
+
+	&__table {
+		width: 100%;
+		font-size: 1.6rem;
+		
+		&-row {
+			&--main {
+				font-weight: 500;
+			}
+		}
+
+		&-col {
+			padding: 4rem 0;
+			border-bottom: .1rem solid $greyLight;
+			
+			&:first-child {
+				display: flex;
+				-webkit-align-items: center;
+				        align-items: center;
+			}
+
+			&:last-child {
+				width: 10.81%;
+				padding-left: 13%;
+			}
+
+			&:not(:first-child):not(:last-child) {
+				text-align: center;
+			}
+		}
+	}
+
+	&__icon {
+		margin-right: 3rem;
+	}
+
+	&__descr {
+		color: $greyDark;
+	}
+
+	&__price {
+		width: 12rem;
+		height: 4rem;
+		border: .2rem solid $red;
+		display: flex;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		-webkit-align-items: center;
+		        align-items: center;
+		color: $red;
+		border-radius: .5rem;
+		font-size: 1.6rem;
+		font-weight: 500;
+	}
+
+	&__btn {
+		margin-top: 5rem;
+		padding: 0;
+		border-width: 0;
+		background-color: transparent;
+		position: relative;
+		left: 100%;
+		transform: translateX(-100%);
+		font-size: 1.6rem;
+		cursor: pointer;
+	}
+}
+
+.hotels {
+	@extend .flights;
+	
+	&__cont {
+		@extend .flights__cont;
+		margin-bottom: 1.5rem;
+	}
+	
+	&__heading {
+		@extend .flights__heading;
+	}
+
+	&__nav {
+		@extend .flights__nav;
+		
+		&-list {
+			@extend .flights__nav-list;
+		}
+
+
+		&-item {
+			@extend .flights__nav-item;
+		}
+
+
+		&-btn {
+			@extend .flights__nav-btn;
+			
+			&--current {
+				@extend .flights__nav-btn--current;
+			}
+		}
+	}
+
+	&__item {
+		margin-top: 2.5rem;
+		border-bottom: 
+		
+		&-promo {
+			width: 100%;
+			height: 20rem;
+		}
+
+		&-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&-content {
+			padding: 2.5rem 1.5rem;
+			border-bottom: .1rem solid $greyLight;
+		}
+
+		&-name {
+			margin: 0;
+			font-size: 1.6rem;
+		}
+
+		&-distance {
+			margin: 2.5rem 0 2rem;
+			width: 49%;
+			display: inline-block;
+			font-size: 1.6rem;
+			color: $greyDark;
+		}
+
+		&-wifi {
+			@extend .hotels__item-distance;
+			text-align: right;
+		}
+
+		&-price {
+			@extend .flights__price;
+			margin: 0;
+		}
+	}
+
+	&__btn {
+		@extend .flights__btn;
+	}
+}
+
+.attractions {
+	@extend .flights;
+	
+	&__cont {
+		@extend .flights__cont;
+		margin-bottom: 4rem;
+	}
+	
+	&__heading {
+		@extend .flights__heading;
+	}
+
+	&__nav {
+		@extend .flights__nav;
+		
+		&-list {
+			@extend .flights__nav-list;
+		}
+
+
+		&-item {
+			@extend .flights__nav-item;
+		}
+
+
+		&-btn {
+			@extend .flights__nav-btn;
+			
+			&--current {
+				@extend .flights__nav-btn--current;
+			}
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: calc(33.33333% - 2rem) calc(33.33333% - 2rem) calc(33.33333% - 2rem);
+		grid-template-rows: 24rem;
+		grid-template-areas:
+			"firstAttraction secondAttraction secondAttraction"
+			"firstAttraction thirdAttraction thirdAttraction"
+			"fourthAttraction fifthAttraction sixthAttraction";
+		grid-column-gap: 3rem;
+		grid-row-gap: 3rem;
+		list-style-type: none;
+	}
+
+	&__item {
+		display: flex;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		    -webkit-align-items: center;
+		            align-items: center;
+		    
+		&:nth-child(1) {
+			grid-area: firstAttraction;
+		}
+
+		&:nth-child(2) {
+			grid-area: secondAttraction;
+		}
+
+		&:nth-child(3) {
+			grid-area: thirdAttraction;
+		}
+
+		&:nth-child(4) {
+			grid-area: fourthAttraction;
+		}
+
+		&:nth-child(5) {
+			grid-area: fifthAttraction;
+		}
+
+		&:nth-child(6) {
+			grid-area: sixthAttraction;
+		}
+
+		&-title {
+			position: absolute;
+			font-size: 1.6rem;
+			font-weight: 500;
+			color: $white;
+		}
+
+		&-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__btn {
+		@extend .flights__btn;
+	}
+}
+
+.trips {
+	@extend .flights;
+	
+	&__cont {
+		@extend .flights__cont;
+		margin-bottom: 4rem;
+	}
+	
+	&__heading {
+		@extend .flights__heading;
+	}
+
+	&__nav {
+		@extend .flights__nav;
+		
+		&-list {
+			@extend .flights__nav-list;
+		}
+
+
+		&-item {
+			@extend .flights__nav-item;
+		}
+
+
+		&-btn {
+			@extend .flights__nav-btn;
+			
+			&--current {
+				@extend .flights__nav-btn--current;
+			}
+		}
+	}
+
+	&__card {
+		margin: 1.5rem 0;
+		border: .1rem solid $greyLight;
+		font-size: 1.6rem;
+		line-height: 1.75;
+
+		&-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&-heading {
+			font-weight: 500;
+		}
+	}
+
+	&__btn {
+		@extend .flights__btn;
+	}
+}
+
+.footer {
+	&__bar {
+		margin-bottom: 9rem;
+		display: flex;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+	}
+
+	&__col {
+		max-width: 25%;
+		
+		&-title {
+			@extend .flights__heading;
+			margin-bottom: 5rem;
+		}
+
+		&-list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		&-item {
+			font-size: 1.6rem;
+			line-height: 2;
+		}
+
+		&-link {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}

@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>TravelCream</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
 <body>
 	<header class="header">
 		<section class="header__bar">
-			<div class="container">
+			<div class="container d-flex justify-content-between">
 				<div class="header__bar--left">
 					<div class="header__logo">TravelCream</div>
 					<nav class="header__nav">
 						<ul class="header__nav-list">
-							<li class="header__nav-item"><a href="#">Flights</a></li>
-							<li class="header__nav-item"><a href="#">Hotels</a></li>
-							<li class="header__nav-item"><a href="#">Trips</a></li>
-							<li class="header__nav-item"><a href="#">Activity</a></li>
-							<li class="header__nav-item"><a href="#">Deals</a></li>
+							<li class="header__nav-item"><a class="header__nav-link" href="#">Flights</a></li>
+							<li class="header__nav-item"><a class="header__nav-link" href="#">Hotels</a></li>
+							<li class="header__nav-item"><a class="header__nav-link" href="#">Trips</a></li>
+							<li class="header__nav-item"><a class="header__nav-link" href="#">Activity</a></li>
+							<li class="header__nav-item"><a class="header__nav-link" href="#">Deals</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -26,18 +28,20 @@
 		</section>
 		<section class="header__banner">
 			<div class="container">
-				<h1 class="header__title">Do you want to visit Paris?</h1>
+				<h1 class="header__title">Do you want to visit Paris ?</h1>
 				<p class="header__descr">Why not</p>
 			</div>
 		</section>
 		<section class="header__search-bar">
 			<div class="container">
-				<form action="" class="header__form">
-					<input placeholder="Where are you leaving from?" type="text" class="header__form-input">
-					<input placeholder="Where do you want to go?" type="text" class="header__form-input">
-					<input placeholder="Date" type="text" class="header__form-input">
-					<input value="Search" type="submit" class="header__form-submit header__form-input">
-				</form>
+				<div class="header__form-cont">
+					<form action="" class="header__form">
+						<input placeholder="Where are you leaving from?" type="text" class="header__form-input">
+						<input placeholder="Where do you want to go?" type="text" class="header__form-input">
+						<input placeholder="Date" type="text" class="header__form-input">
+						<input value="Search" type="submit" class="header__form-submit header__form-input">
+					</form>
+				</div>
 			</div>
 		</section>
 	</header>
@@ -46,15 +50,17 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<h2 class="flights__heading">Flights</h2>
-						<nav class="flights__nav">
-							<ul class="flights__nav-list">
-								<li class="flights__nav-item"><button class="flights__nav-btn flights__nav-btn--current">Non stop</button></li>
-								<li class="flights__nav-item"><button class="flights__nav-btn">Best Price</button></li>
-								<li class="flights__nav-item"><button class="flights__nav-btn">Airline</button></li>
-								<li class="flights__nav-item"><button class="flights__nav-btn">Schedule</button></li>
-							</ul>
-						</nav>
+						<div class="flights__cont">
+							<h2 class="flights__heading">Flights</h2>
+							<nav class="flights__nav">
+								<ul class="flights__nav-list">
+									<li class="flights__nav-item"><button class="flights__nav-btn flights__nav-btn--current">Non stop</button></li>
+									<li class="flights__nav-item"><button class="flights__nav-btn">Best Price</button></li>
+									<li class="flights__nav-item"><button class="flights__nav-btn">Airline</button></li>
+									<li class="flights__nav-item"><button class="flights__nav-btn">Schedule</button></li>
+								</ul>
+							</nav>
+						</div>
 					</div>
 					<div class="col-lg-12">
 						<table class="flights__table">
@@ -226,13 +232,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<h2 class="hotels__heading">Hotels</h2>
-						<nav class="hotels__nav">
-							<ul class="hotels__nav-list">
-								<li class="hotels__nav-item"><button class="hotels__nav-btn hotels__nav-btn--current">Best Price</button></li>
-								<li class="hotels__nav-item"><button class="hotels__nav-btn">Distance</button></li>
-							</ul>
-						</nav>
+						<div class="hotels__cont">
+							<h2 class="hotels__heading">Hotels</h2>
+							<nav class="hotels__nav">
+								<ul class="hotels__nav-list">
+									<li class="hotels__nav-item"><button class="hotels__nav-btn hotels__nav-btn--current">Best Price</button></li>
+									<li class="hotels__nav-item"><button class="hotels__nav-btn">Distance</button></li>
+								</ul>
+							</nav>
+						</div>
 					</div>
 					<div class="col-lg-12">
 						<div class="row">
@@ -241,10 +249,12 @@
 									<div class="hotels__item-promo">
 										<img src="img/Hotels/hotel1.jpg" alt="Hôtel Paris Ouest Achères" class="hotels__item-img">
 									</div>
-									<h3 class="hotels__item-name">Hôtel Paris Ouest Achères</h3>
-									<div class="hotels__item-distance">12,3 km</div>
-									<div class="hotels__item-wifi">Free Wi-Fi</div>
-									<div class="hotels__item-price">30 $</div>
+									<div class="hotels__item-content">
+										<h3 class="hotels__item-name">Hôtel Paris Ouest Achères</h3>
+										<div class="hotels__item-distance">12,3 km</div>
+										<div class="hotels__item-wifi">Free Wi-Fi</div>
+										<p class="hotels__item-price">30 $</p>
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-4">
@@ -252,10 +262,12 @@
 									<div class="hotels__item-promo">
 										<img src="img/Hotels/hotel2.jpg" alt="L'Hôtel du Collectionneur" class="hotels__item-img">
 									</div>
-									<h3 class="hotels__item-name">L'Hôtel du Collectionneur</h3>
-									<div class="hotels__item-distance">9,8 km</div>
-									<div class="hotels__item-wifi">Free Wi-Fi</div>
-									<div class="hotels__item-price">38 $</div>
+									<div class="hotels__item-content">
+										<h3 class="hotels__item-name">L'Hôtel du Collectionneur</h3>
+										<div class="hotels__item-distance">9,8 km</div>
+										<div class="hotels__item-wifi">Free Wi-Fi</div>
+										<p class="hotels__item-price">38 $</p>
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-4">
@@ -263,10 +275,12 @@
 									<div class="hotels__item-promo">
 										<img src="img/Hotels/hotel3.jpg" alt="Hôtel Eiffel Seine" class="hotels__item-img">
 									</div>
-									<h3 class="hotels__item-name">Hôtel Eiffel Seine</h3>
-									<div class="hotels__item-distance">17,6 km</div>
-									<div class="hotels__item-wifi">Free Wi-Fi</div>
-									<div class="hotels__item-price">42 $</div>
+									<div class="hotels__item-content">
+										<h3 class="hotels__item-name">Hôtel Eiffel Seine</h3>
+										<div class="hotels__item-distance">17,6 km</div>
+										<div class="hotels__item-wifi">Free Wi-Fi</div>
+										<p class="hotels__item-price">42 $</p>
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-4">
@@ -274,10 +288,12 @@
 									<div class="hotels__item-promo">
 										<img src="img/Hotels/hotel4.jpg" alt="Hôtel Paris Ouest Achères" class="hotels__item-img">
 									</div>
-									<h3 class="hotels__item-name">Hôtel Mademoiselle</h3>
-									<div class="hotels__item-distance">23,2 km</div>
-									<div class="hotels__item-wifi">Free Wi-Fi</div>
-									<div class="hotels__item-price">46 $</div>
+									<div class="hotels__item-content">
+										<h3 class="hotels__item-name">Hôtel Mademoiselle</h3>
+										<div class="hotels__item-distance">23,2 km</div>
+										<div class="hotels__item-wifi">Free Wi-Fi</div>
+										<p class="hotels__item-price">46 $</p>
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-4">
@@ -285,10 +301,12 @@
 									<div class="hotels__item-promo">
 										<img src="img/Hotels/hotel5.jpg" alt="Hôtel Paris Ouest Achères" class="hotels__item-img">
 									</div>
-									<h3 class="hotels__item-name">Hôtel Novotel Paris-Les-Halles</h3>
-									<div class="hotels__item-distance">10,7 km</div>
-									<div class="hotels__item-wifi">Free Wi-Fi</div>
-									<div class="hotels__item-price">52 $</div>
+									<div class="hotels__item-content">
+										<h3 class="hotels__item-name">Hôtel Novotel Paris-Les-Halles</h3>
+										<div class="hotels__item-distance">10,7 km</div>
+										<div class="hotels__item-wifi">Free Wi-Fi</div>
+										<p class="hotels__item-price">52 $</p>
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-4">
@@ -296,14 +314,16 @@
 									<div class="hotels__item-promo">
 										<img src="img/Hotels/hotel6.jpg" alt="Hôtel Paris Ouest Achères" class="hotels__item-img">
 									</div>
-									<h3 class="hotels__item-name">Villa Royale Montsouris</h3>
-									<div class="hotels__item-distance">14,8 km</div>
-									<div class="hotels__item-wifi">Free Wi-Fi</div>
-									<div class="hotels__item-price">56 $</div>
+									<div class="hotels__item-content">
+										<h3 class="hotels__item-name">Villa Royale Montsouris</h3>
+										<div class="hotels__item-distance">14,8 km</div>
+										<div class="hotels__item-wifi">Free Wi-Fi</div>
+										<p class="hotels__item-price">56 $</p>
+									</div>
 								</div>
 							</div>
-							<button class="hotels__btn">See all hotels</button>
 						</div>
+						<button class="hotels__btn">See all hotels</button>
 					</div>
 				</div>
 			</div>
@@ -312,49 +332,49 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<h2 class="attractions__heading">Attractions</h2>
-						<nav class="attractions__nav">
-							<ul class="attractions__nav-list">
-								<li class="attractions__nav-item"><button class="attractions__nav-btn attractions__nav-btn--current">All</button></li>
-								<li class="attractions__nav-item"><button class="attractions__nav-btn">Shoppings</button></li>
-								<li class="attractions__nav-item"><button class="attractions__nav-btn">Shows</button></li>
-								<li class="attractions__nav-item"><button class="attractions__nav-btn">Parks</button></li>
-								<li class="attractions__nav-item"><button class="attractions__nav-btn">Circuits</button></li>
-								<li class="attractions__nav-item"><button class="attractions__nav-btn">Museums</button></li>
-								<li class="attractions__nav-item"><button class="attractions__nav-btn">Monuments</button></li>
-							</ul>
-						</nav>
+						<div class="attractions__cont">
+							<h2 class="attractions__heading">Attractions</h2>
+							<nav class="attractions__nav">
+								<ul class="attractions__nav-list">
+									<li class="attractions__nav-item"><button class="attractions__nav-btn attractions__nav-btn--current">All</button></li>
+									<li class="attractions__nav-item"><button class="attractions__nav-btn">Shoppings</button></li>
+									<li class="attractions__nav-item"><button class="attractions__nav-btn">Shows</button></li>
+									<li class="attractions__nav-item"><button class="attractions__nav-btn">Parks</button></li>
+									<li class="attractions__nav-item"><button class="attractions__nav-btn">Circuits</button></li>
+									<li class="attractions__nav-item"><button class="attractions__nav-btn">Museums</button></li>
+									<li class="attractions__nav-item"><button class="attractions__nav-btn">Monuments</button></li>
+								</ul>
+							</nav>
+						</div>
 					</div>
 					<div class="col-lg-12">
-						<div class="row">
-							<ul class="attractions__list">
-								<li class="attractions__item">
-									<h3 class="attractions__item-title">Eiffel Tower</h3>
-									<img src="img/Attractions/attraction1.jpg" alt="Eiffel Tower" class="attractions__item-img">
-								</li>
-								<li class="attractions__item">
-									<h3 class="attractions__item-title">Louvres</h3>
-									<img src="img/Attractions/attraction2.jpg" alt="Louvres" class="attractions__item-img">
-								</li>
-								<li class="attractions__item">
-									<h3 class="attractions__item-title">Notre Dame de Paris</h3>
-									<img src="img/Attractions/attraction3.jpg" alt="Notre Dame de Paris" class="attractions__item-img">
-								</li>
-								<li class="attractions__item">
-									<h3 class="attractions__item-title">Forum des Halles</h3>
-									<img src="img/Attractions/attraction4.jpg" alt="Forum des Halles" class="attractions__item-img">
-								</li>
-								<li class="attractions__item">
-									<h3 class="attractions__item-title">Arc de Triomphe</h3>
-									<img src="img/Attractions/attraction5.jpg" alt="Arc de Triomphe" class="attractions__item-img">
-								</li>
-								<li class="attractions__item">
-									<h3 class="attractions__item-title">Sacré Coeur</h3>
-									<img src="img/Attractions/attraction6.jpg" alt="Sacré Coeur" class="attractions__item-img">
-								</li>
-							</ul>
-							<button class="attractions__btn">See all attractions</button>
-						</div>
+						<ul class="attractions__list">
+							<li class="attractions__item">
+								<h3 class="attractions__item-title">Eiffel Tower</h3>
+								<img src="img/Attractions/attraction1.jpg" alt="Eiffel Tower" class="attractions__item-img">
+							</li>
+							<li class="attractions__item">
+								<h3 class="attractions__item-title">Louvres</h3>
+								<img src="img/Attractions/attraction2.jpg" alt="Louvres" class="attractions__item-img">
+							</li>
+							<li class="attractions__item">
+								<h3 class="attractions__item-title">Notre Dame de Paris</h3>
+								<img src="img/Attractions/attraction3.jpg" alt="Notre Dame de Paris" class="attractions__item-img">
+							</li>
+							<li class="attractions__item">
+								<h3 class="attractions__item-title">Forum des Halles</h3>
+								<img src="img/Attractions/attraction4.jpg" alt="Forum des Halles" class="attractions__item-img">
+							</li>
+							<li class="attractions__item">
+								<h3 class="attractions__item-title">Arc de Triomphe</h3>
+								<img src="img/Attractions/attraction5.jpg" alt="Arc de Triomphe" class="attractions__item-img">
+							</li>
+							<li class="attractions__item">
+								<h3 class="attractions__item-title">Sacré Coeur</h3>
+								<img src="img/Attractions/attraction6.jpg" alt="Sacré Coeur" class="attractions__item-img">
+							</li>
+						</ul>
+						<button class="attractions__btn">See all attractions</button>
 					</div>
 				</div>
 			</div>
@@ -363,46 +383,54 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<h2 class="trips__heading">Trips</h2>
-						<nav class="trips__nav">
-							<ul class="trips__nav-list">
-								<li class="trips__nav-item"><button class="trips__nav-btn attractions__nav-btn--current">Best Trips</button></li>
-								<li class="trips__nav-item"><button class="trips__nav-btn">Popularity</button></li>
-							</ul>
-						</nav>
+						<div class="hotels__cont">
+							<h2 class="trips__heading">Trips</h2>
+							<nav class="trips__nav">
+								<ul class="trips__nav-list">
+									<li class="trips__nav-item"><button class="trips__nav-btn trips__nav-btn--current">Best Trips</button></li>
+									<li class="trips__nav-item"><button class="trips__nav-btn">Popularity</button></li>
+								</ul>
+							</nav>
+						</div>
 					</div>
 					<div class="col-lg-12">
 						<div class="row">
 							<div class="col-lg-12">
-								<div class="row">
-									<div class="col-lg-4">
-										<img src="img/Trips/trip1.jpg" alt="Accès prioritaire au sommet de la tour Eiffel et hôte" class="trips__item-img">
-									</div>
-									<div class="col-lg-8">
-										<h3 class="trips__item-heading">Accès prioritaire au sommet de la tour Eiffel et hôte</h3>
-										<p>Avec ce billet coupe-file pour la tour Eiffel, profitez de la seule entrée prioritaire à la tour qui comprend un guide et des commentaires, vous offrant une visite sans encombre de l'un des monuments les plus visités au monde. Accompagné de votre guide depuis l'extérieur de l'entrée principale jusqu'au deuxième étage, vous profiterez d'une entrée détendue à la tour Eiffel avec suffisamment de temps libre pour flâner. </p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<div class="row">
-									<div class="col-lg-4">
-										<img src="img/Trips/trip2.jpg" alt="Croisière sur la Seine de 3 heures avec les Bateaux-Mouches" class="trips__item-img">
-									</div>
-									<div class="col-lg-8">
-										<h3 class="trips__item-heading">Croisière sur la Seine de 3 heures avec les Bateaux-Mouches</h3>
-										<p>Découvrez Paris depuis l'eau lors d'une croisière de 3 heures sur la Seine à bord des emblématiques Bateaux-Mouches, avec dîner inclus. Vous pourrez admirer l’élégante architecture de la ville toute illuminée pour la soirée tandis que vous passerez à côté de monuments tels que la cathédrale Notre-Dame et la Tour Eiffel. Au moment de la réservation, choisissez le menu Prestige ou Excellence.</p>
+								<div class="trips__card">
+									<div class="row">
+										<div class="col-lg-4">
+											<img src="img/Trips/trip1.jpg" alt="Accès prioritaire au sommet de la tour Eiffel et hôte" class="trips__card-img">
+										</div>
+										<div class="col-lg-8">
+											<h3 class="trips__card-heading">Accès prioritaire au sommet de la tour Eiffel et hôte</h3>
+											<p>Avec ce billet coupe-file pour la tour Eiffel, profitez de la seule entrée prioritaire à la tour qui comprend un guide et des commentaires, vous offrant une visite sans encombre de l'un des monuments les plus visités au monde. Accompagné de votre guide depuis l'extérieur de l'entrée principale jusqu'au deuxième étage, vous profiterez d'une entrée détendue à la tour Eiffel avec suffisamment de temps libre pour flâner. </p>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-12">
-								<div class="row">
-									<div class="col-lg-4">
-										<img src="img/Trips/trip3.jpg" alt="Billet d'entrée au Musée du Louvre avec présentation par un guide" class="trips__item-img">
+								<div class="trips__card">
+									<div class="row">
+										<div class="col-lg-4">
+											<img src="img/Trips/trip2.jpg" alt="Croisière sur la Seine de 3 heures avec les Bateaux-Mouches" class="trips__card-img">
+										</div>
+										<div class="col-lg-8">
+											<h3 class="trips__card-heading">Croisière sur la Seine de 3 heures avec les Bateaux-Mouches</h3>
+											<p>Découvrez Paris depuis l'eau lors d'une croisière de 3 heures sur la Seine à bord des emblématiques Bateaux-Mouches, avec dîner inclus. Vous pourrez admirer l’élégante architecture de la ville toute illuminée pour la soirée tandis que vous passerez à côté de monuments tels que la cathédrale Notre-Dame et la Tour Eiffel. Au moment de la réservation, choisissez le menu Prestige ou Excellence.</p>
+										</div>
 									</div>
-									<div class="col-lg-8">
-										<h3 class="trips__item-heading">Billet d'entrée au Musée du Louvre avec présentation par un guide</h3>
-										<p>À un point de rencontre au centre de Paris, rencontrez le fournisseur de billet local, qui vous guidera devant la ligne d'entrée au Musée du Louvre pour un accès au musée, une des attractions les plus populaires de la ville. Explorez à votre guise l'art et d'autres artsqui vous intéressent. La cerise sur le gâteau est, bien entendu, la Joconde de Léonard de Vinci mais il y a de nombreux trésors à découvrir.</p>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="trips__card">
+									<div class="row">
+										<div class="col-lg-4">
+											<img src="img/Trips/trip3.jpg" alt="Billet d'entrée au Musée du Louvre avec présentation par un guide" class="trips__card-img">
+										</div>
+										<div class="col-lg-8">
+											<h3 class="trips__card-heading">Billet d'entrée au Musée du Louvre avec présentation par un guide</h3>
+											<p>À un point de rencontre au centre de Paris, rencontrez le fournisseur de billet local, qui vous guidera devant la ligne d'entrée au Musée du Louvre pour un accès au musée, une des attractions les plus populaires de la ville. Explorez à votre guise l'art et d'autres artsqui vous intéressent. La cerise sur le gâteau est, bien entendu, la Joconde de Léonard de Vinci mais il y a de nombreux trésors à découvrir.</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -420,22 +448,22 @@
 					<h3 class="footer__col-title">Cities</h3>
 					<ul class="footer__col-list">
 						<li class="footer__col-item">
-							<p>Paris</p>
+							<a class="footer__col-link" href="#">Paris</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Miami</p>
+							<a class="footer__col-link" href="#">Miami</a>
 						</li>
 						<li class="footer__col-item">
-							<p>London</p>
+							<a class="footer__col-link" href="#">London</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Madrid</p>
+							<a class="footer__col-link" href="#">Madrid</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Tokyo</p>
+							<a class="footer__col-link" href="#">Tokyo</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Pekin</p>
+							<a class="footer__col-link" href="#">Pekin</a>
 						</li>
 					</ul>
 				</div>
@@ -443,16 +471,16 @@
 					<h3 class="footer__col-title">Explore</h3>
 					<ul class="footer__col-list">
 						<li class="footer__col-item">
-							<p>Register</p>
+							<a class="footer__col-link" href="#">Register</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Login</p>
+							<a class="footer__col-link" href="#">Login</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Assistance</p>
+							<a class="footer__col-link" href="#">Assistance</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Eco</p>
+							<a class="footer__col-link" href="#">Eco</a>
 						</li>
 					</ul>
 				</div>
@@ -460,19 +488,19 @@
 					<h3 class="footer__col-title">About us</h3>
 					<ul class="footer__col-list">
 						<li class="footer__col-item">
-							<p>About TravelCream</p>
+							<a class="footer__col-link" href="#">About TravelCream</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Careers</p>
+							<a class="footer__col-link" href="#">Careers</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Blog</p>
+							<a class="footer__col-link" href="#">Blog</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Privacy Policy</p>
+							<a class="footer__col-link" href="#">Privacy Policy</a>
 						</li>
 						<li class="footer__col-item">
-							<p>Terms of Usage</p>
+							<a class="footer__col-link" href="#">Terms of Usage</a>
 						</li>
 					</ul>
 				</div>
@@ -480,7 +508,7 @@
 					<h3 class="footer__col-title">Contact</h3>
 					<ul class="footer__col-list">
 						<li class="footer__col-item">
-							<p>Feel free to get in touch via email: <span style="color: #ff4b64">support@travelcream.com</span></p>
+							<span>Feel free to get in touch via email: <span style="color: #ff4b64">support@travelcream.com</span></span>
 						</li>
 					</ul>
 				</div>
