@@ -1,0 +1,132 @@
+.header {
+	&__form {
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
+	    bottom: -5.5rem;
+	    
+	    &-input {
+	    	width: 50% !important;
+	    }
+	}
+}
+/*
+.flights__nav-item:not(:last-child),
+.hotels__nav-item:not(:last-child),
+.attractions__nav-item:not(:last-child),
+.trips__nav-item:not(:last-child) {
+	position: absolute;
+	right: 0;
+}
+
+.flights__nav-btn, 
+.hotels__nav-btn, 
+.attractions__nav-btn, 
+.trips__nav-btn {
+	background-color: $white;
+}
+
+.flights__nav-btn--open-nav, 
+.hotels__nav-btn--open-nav, 
+.attractions__nav-btn--open-nav, 
+.trips__nav-btn--open-nav {
+	display: block;
+	position: relative;
+}
+*/
+
+.flights__nav-list, 
+.hotels__nav-list, 
+.attractions__nav-list, 
+.trips__nav-list {
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.flights__nav-item, 
+.hotels__nav-item, 
+.attractions__nav-item, 
+.trips__nav-item {
+	margin: 1rem 0 !important;
+}
+
+.flights__cont, 
+.hotels__cont, 
+.attractions__cont, 
+.trips__cont {
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+}
+
+.trips__card-descr {
+	padding: 1.5rem;
+}
+
+.footer__col-item {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 767px) {
+	.header__bar--left {
+	    justify-content: center;
+	    align-items: center;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	        -ms-flex-wrap: wrap;
+	            flex-wrap: wrap;
+	    width: 100%;
+	}
+
+	.header__nav-list {
+		margin: 2rem 0;
+	}
+
+	.header__nav-item:first-child {
+		margin-left: 0;
+	}
+
+	.header__btn {
+		margin: auto;
+	}
+
+	.header__title {
+	    font-size: 5.2rem;
+	}
+
+	.header__descr {
+	    font-size: 2.5rem;
+	    margin: 0;
+	}
+
+	.flights__content {
+		overflow: auto;
+	}
+
+	.flights__table {
+		width: 99.2rem;
+	}
+
+	.attractions__list {
+	    grid-template-columns: calc(50% - 2rem) calc(50% - 2rem);
+	    grid-template-areas:
+	        "firstAttraction secondAttraction"
+	        "thirdAttraction fourthAttraction"
+	        "fifthAttraction sixthAttraction";
+	}
+
+	.attractions__item-title {
+		font-size: 1.4rem;
+	}
+
+	.footer__bar {
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+
+	.footer__col {
+		margin-top: 4rem;
+		max-width: 100%;
+	}
+}
